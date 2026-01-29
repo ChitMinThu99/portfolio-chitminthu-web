@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Chit Min Thu</title>
+
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-[#130428] text-white">
+    <!-- Navigation -->
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 right-0 z-50 nav-backdrop bg-transparent"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2">
+            <div
+              class="relative animate-slide-left w-10 h-10 bg-gradient-to-r from-purple-600 to-purple-800 rounded-lg flex items-center justify-center font-bold text-white"
+            >
+              CMT
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <button
+              onclick="scrollToSection('about')"
+              class="animate-slide-down text-sm hover:text-purple-400 transition-colors"
+            >
+              About
+            </button>
+            <button
+              onclick="scrollToSection('educations')"
+              class="animate-slide-down1 text-sm hover:text-purple-400 transition-colors"
+            >
+              Education
+            </button>
+            <button
+              onclick="scrollToSection('projects')"
+              class="animate-slide-down2 text-sm hover:text-purple-400 transition-colors"
+            >
+              Projects
+            </button>
+            <button
+              onclick="scrollToSection('contact')"
+              class="animate-slide-down3 text-sm hover:text-purple-400 transition-colors"
+            >
+              Contact
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button
+            onclick="toggleMenu()"
+            class="md:hidden p-2"
+            title="Toggle mobile menu"
+            aria-label="Toggle mobile menu"
+          >
+            <i id="menu-icon" class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden bg-[#1a0833] border-t border-purple-900/20 hidden"
+      >
+        <div class="px-4 py-4 space-y-3">
+          <button
+            onclick="scrollToSection('about')"
+            class="block w-full text-left py-2 hover:text-purple-400 transition-colors"
+          >
+            About
+          </button>
+          <button
+            onclick="scrollToSection('experience')"
+            class="block w-full text-left py-2 hover:text-purple-400 transition-colors"
+          >
+            Experience
+          </button>
+          <button
+            onclick="scrollToSection('projects')"
+            class="block w-full text-left py-2 hover:text-purple-400 transition-colors"
+          >
+            Projects
+          </button>
+          <button
+            onclick="scrollToSection('contact')"
+            class="block w-full text-left py-2 hover:text-purple-400 transition-colors"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="about"
+      class="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20"
+    >
+      <div class="absolute inset-0 overflow-hidden">
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-600/10 rounded-full blur-3xl"
+        ></div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10"
+      >
+        <div class="animate-slide-left">
+          <p class="text-purple-400 mb-4">
+            Hello! I'm <span class="text-white">Chit Min Thu</span>
+          </p>
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl mb-6">
+            <span class="line-through" style="text-decoration-color: red"
+              >Never</span
+            >
+            Judge a Book
+            <br />
+            by its <span class="text-purple-400">Cover</span>
+          </h1>
+          <p class="text-lg text-gray-300 mb-6 max-w-xl">
+            I'm a <span class="text-white">Software Engineer</span>
+          </p>
+          <p class="text-gray-400 mb-8 max-w-xl leading-relaxed">
+            A self-taught software engineer, functioning in the industry for 3+
+            years now. I make meaningful and delightful digital products that
+            create an equilibrium between user needs and business goals.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <button
+              onclick="scrollToSection('contact')"
+              class="button-hover px-8 py-3 bg-gradient-to-r from-purple-600 to-purple-800 rounded-lg flex items-center gap-2 hover:shadow-lg hover:shadow-purple-500/50 transition-all"
+            >
+              Get in Touch
+              <i class="fas fa-arrow-right"></i>
+            </button>
+            <button
+              onclick="scrollToSection('projects')"
+              class="button-hover px-8 py-3 border border-purple-600 rounded-lg hover:bg-purple-600/10 transition-all"
+            >
+              View Work
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="animate-slide-right relative flex justify-center lg:justify-end"
+        >
+          <div class="relative">
+            <div
+              class="absolute insert-0 bg-gradient-to-br from-purple-600 to-purple-900 rounded-3xl blur-2xl opacity-30"
+            ></div>
+            <img
+              src="../assets/image/resume-nobg.png"
+              class="relative w-80 h-80 sm:w-full sm:h-full object-contain rounded-3xl shadow-2xl"
+              alt="Profile"
+            />
+            <div
+              class="absolute -bottom-6 -right-6 w-30 h-30 bg-purple-600/20 rounded-full blur-xl"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="educations" class="py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 animate-fade-in-up">
+          <h2 class="text-4xl sm:text-5xl mb-4">Education & Experience</h2>
+          <div class="w-20 h-1 bg-purple-600 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Education Card 1 -->
+          <div
+            class="group relative overflow-hidden rounded-2xl p-6 shadow-lg card-hover"
+            style="
+              background: linear-gradient(
+                137.87deg,
+                rgb(19, 4, 40) 19.946%,
+                rgb(37, 16, 67) 67.641%,
+                rgb(56, 18, 109) 107.08%
+              );
+            "
+          >
+            <div
+              class="absolute inset-0 bg-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <div
+                  class="w-16 h-16 bg-purple-600/20 rounded-xl flex items-center justify-center"
+                >
+                  <div class="w-8 h-8 bg-purple-600/40 rounded-lg"></div>
+                </div>
+                <span class="text-xs text-purple-300">2022 - 2026</span>
+              </div>
+              <h3 class="text-xl mb-2">Bachelor of Software Engineering</h3>
+              <p class="text-purple-300 text-sm mb-3">
+                Mae Fah Luang University
+              </p>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Graduated with a Bachelor's degree in Software Engineering from
+                Mae Fah Luang University.
+              </p>
+            </div>
+          </div>
+
+          <!-- Education Card 2 -->
+          <div
+            class="group relative overflow-hidden rounded-2xl p-6 shadow-lg card-hover"
+            style="
+              background: linear-gradient(
+                106.075deg,
+                rgb(19, 4, 40) 0.58475%,
+                rgb(37, 16, 67) 16.317%,
+                rgb(56, 18, 109) 29.327%
+              );
+            "
+          >
+            <div
+              class="absolute inset-0 bg-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <div
+                  class="w-16 h-16 bg-purple-600/20 rounded-xl flex items-center justify-center"
+                >
+                  <div class="w-8 h-8 bg-purple-600/40 rounded-lg"></div>
+                </div>
+                <span class="text-xs text-purple-300">2017 - 2020</span>
+              </div>
+              <h3 class="text-xl mb-2">
+                Electrical and Communication Engineering
+              </h3>
+              <p class="text-purple-300 text-sm mb-3">
+                Sagaing Technology University, Myanmar
+              </p>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                I studied Electrical and Communication Engineering for 3 years
+                at Sagaing Technology University, Myanmar.
+              </p>
+            </div>
+          </div>
+
+          <!-- Education Card 3 -->
+          <div
+            class="group relative overflow-hidden rounded-2xl p-6 shadow-lg card-hover"
+            style="
+              background: linear-gradient(
+                168.905deg,
+                rgb(19, 4, 40) 37.22%,
+                rgb(37, 16, 67) 70.43%,
+                rgb(56, 18, 109) 97.891%
+              );
+            "
+          >
+            <div
+              class="absolute inset-0 bg-purple-600/10 opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <div class="relative z-10">
+              <div class="flex items-start justify-between mb-4">
+                <div
+                  class="w-16 h-16 bg-purple-600/20 rounded-xl flex items-center justify-center"
+                >
+                  <div class="w-8 h-8 bg-purple-600/40 rounded-lg"></div>
+                </div>
+                <span class="text-xs text-purple-300">2025 - Present</span>
+              </div>
+              <h3 class="text-xl mb-2">Digital Marketing and Administration</h3>
+              <p class="text-purple-300 text-sm mb-3">A-Roi A-Roi Restaurant</p>
+              <p class="text-gray-400 text-sm leading-relaxed">
+                Managing digital marketing strategies and administrative tasks
+                to enhance online presence and operational efficiency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-[#1a0833]">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 animate-fade-in-up">
+          <h2 class="text-4xl sm:text-5xl mb-4">Skills & Expertise</h2>
+          <div class="w-20 h-1 bg-purple-600 rounded-full"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Skill 1 -->
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-lg">Java</span>
+              <span class="text-purple-400">90%</span>
+            </div>
+            <div class="h-2 bg-purple-900/30 rounded-full overflow-hidden">
+              <div
+                class="skill-bar h-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full"
+                style="width: 90%; transition: width 1s ease-out"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill 2 -->
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-lg">Nuxt</span>
+              <span class="text-purple-400">75%</span>
+            </div>
+            <div class="h-2 bg-purple-900/30 rounded-full overflow-hidden">
+              <div
+                class="skill-bar h-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full"
+                style="width: 75%; transition: width 1s ease-out"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill 3 -->
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-lg">React</span>
+              <span class="text-purple-400">55%</span>
+            </div>
+            <div class="h-2 bg-purple-900/30 rounded-full overflow-hidden">
+              <div
+                class="skill-bar h-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full"
+                style="width: 55%; transition: width 1s ease-out"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill 4 -->
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-lg">Tailwind CSS</span>
+              <span class="text-purple-400">92%</span>
+            </div>
+            <div class="h-2 bg-purple-900/30 rounded-full overflow-hidden">
+              <div
+                class="skill-bar h-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full"
+                style="width: 92%; transition: width 1s ease-out"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill 5 -->
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-lg">Node.js</span>
+              <span class="text-purple-400">70%</span>
+            </div>
+            <div class="h-2 bg-purple-900/30 rounded-full overflow-hidden">
+              <div
+                class="skill-bar h-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full"
+                style="width: 70%; transition: width 1s ease-out"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Skill 6 -->
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="text-lg">MySQL</span>
+              <span class="text-purple-400">80%</span>
+            </div>
+            <div class="h-2 bg-purple-900/30 rounded-full overflow-hidden">
+              <div
+                class="skill-bar h-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full"
+                style="width: 80%; transition: width 1s ease-out"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 animate-fade-in-up">
+          <h2 class="text-4xl sm:text-5xl mb-4">Featured Projects</h2>
+          <div class="w-20 h-1 bg-purple-600 rounded-full"></div>
+        </div>
+
+        <div class="space-y-12">
+          <!-- Project 1 -->
+          <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <div class="relative group overflow-hidden rounded-2xl">
+                <img
+                  src="../assets/image/SOMBi.png"
+                  alt="Curriculum Statistics Website for SOM"
+                  class="w-full h-80 object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent opacity-0 group-hover:opacity-100 project-overlay flex items-end p-6"
+                >
+                  <a
+                    class="flex items-center gap-2 text-white"
+                    href="https://app.som-bi.work.gd"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Project <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-3xl mb-4">
+                Curriculum Statistics Website for SOM
+              </h3>
+              <p class="text-gray-400 mb-6 leading-relaxed">
+                A web application that provides statistical analysis and
+                visualization of curriculum data for the School of Management.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-4 py-2 bg-purple-600/20 border border-purple-600/30 rounded-full text-sm text-purple-300"
+                  >Nuxt</span
+                >
+                <span
+                  class="px-4 py-2 bg-purple-600/20 border border-purple-600/30 rounded-full text-sm text-purple-300"
+                  >Node.js</span
+                >
+                <span
+                  class="px-4 py-2 bg-purple-600/20 border border-purple-600/30 rounded-full text-sm text-purple-300"
+                  >MySQL</span
+                >
+                <span
+                  class="px-4 py-2 bg-purple-600/20 border border-purple-600/30 rounded-full text-sm text-purple-300"
+                  >Chart.js</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="grid lg:grid-cols-2 gap-8 items-center lg:grid-flow-dense"
+          >
+            <div class="lg:col-start-2">
+              <div class="relative group overflow-hidden rounded-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1713857297379-6fc26e70f581?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzY5NTAwNTA5fDA&ixlib=rb-4.1.0&q=80&w=1080"
+                  alt="Mobile Banking App"
+                  class="w-full h-80 object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-purple-900/90 to-transparent opacity-0 group-hover:opacity-100 project-overlay flex items-end p-6"
+                >
+                  <button class="flex items-center gap-2 text-white">
+                    View Project <i class="fas fa-external-link-alt"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="lg:col-start-1 lg:row-start-1">
+              <h3 class="text-3xl mb-4">Mobile Banking App</h3>
+              <p class="text-gray-400 mb-6 leading-relaxed">
+                Secure mobile banking application with biometric authentication
+                and instant transaction capabilities.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span
+                  class="px-4 py-2 bg-purple-600/20 border border-purple-600/30 rounded-full text-sm text-purple-300"
+                  >React Native</span
+                >
+                <span
+                  class="px-4 py-2 bg-purple-600/20 border border-purple-600/30 rounded-full text-sm text-purple-300"
+                  >Firebase</span
+                >
+                <span
+                  class="px-4 py-2 bg-purple-600/20 border border-purple-600/30 rounded-full text-sm text-purple-300"
+                  >Stripe</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-[#1a0833]">
+      <div class="max-w-4xl mx-auto text-center animate-fade-in-up">
+        <h2 class="text-4xl sm:text-5xl mb-6">Let's Work Together</h2>
+        <p class="text-gray-400 mb-12 text-lg max-w-2xl mx-auto">
+          I'm currently looking to join a cross-functional team that values
+          improving people's lives through accessible design.
+        </p>
+
+        <div class="flex justify-center gap-6 mb-12">
+          <!-- github  -->
+          <a
+            href="https://github.com/ChitMinThu99"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="icon-hover w-14 h-14 bg-purple-600/20 border border-purple-600/30 rounded-full flex items-center justify-center hover:bg-purple-600/30 animate-slide-left"
+          >
+            <i class="fab fa-github text-2xl"></i>
+          </a>
+
+          <!-- linkedin  -->
+          <a
+            href="https://www.linkedin.com/in/chit-min-thu-29515b289"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="icon-hover w-14 h-14 bg-purple-600/20 border border-purple-600/30 rounded-full flex items-center justify-center hover:bg-purple-600/30 transition-all"
+          >
+            <i class="fab fa-linkedin text-2xl"></i>
+          </a>
+
+          <!-- email  -->
+          <a
+            href="mailto:chitminthu.mdy2000@gmail.com"
+            class="icon-hover w-14 h-14 bg-purple-600/20 border border-purple-600/30 rounded-full flex items-center justify-center hover:bg-purple-600/30 animate-slide-right"
+          >
+            <i class="fas fa-envelope text-2xl"></i>
+          </a>
+        </div>
+
+        <!-- send message button -->
+        <a
+          href="mailto:chitminthu.mdy2000@gmail.com"
+          class="button-hover inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-purple-800 rounded-lg hover:shadow-lg hover:shadow-purple-500/50 animate-fade-in-up"
+        >
+          Send Message
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 px-4 sm:px-6 lg:px-8 border-t border-purple-900/20">
+      <div
+        class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4"
+      >
+        <p class="text-gray-400 text-sm">
+          © 2026 Chit Min Thu. All rights reserved.
+        </p>
+        <div class="flex gap-6">
+          <button
+            onclick="scrollToSection('about')"
+            class="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+          >
+            About
+          </button>
+          <button
+            onclick="scrollToSection('projects')"
+            class="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+          >
+            Projects
+          </button>
+          <button
+            onclick="scrollToSection('contact')"
+            class="text-sm text-gray-400 hover:text-purple-400 transition-colors"
+          >
+            Contact
+          </button>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

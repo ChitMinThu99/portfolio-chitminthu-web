@@ -1,0 +1,23 @@
+# Node modules
+node_modules/
+
+# Build output
+*.log
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
+
+# Environment files
+.env
+.env.*
+
+# Other
+*.tmp
+*.swp
+.hintrc
