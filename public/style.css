@@ -118,11 +118,11 @@
 }
 
 .animate-slide-left {
-  animation: slideInFromLeft 0.8s ease-out forwards;
+  animation: slideInFromLeft 0.8s ease-out;
 }
 
 .animate-slide-right {
-  animation: slideInFromRight 2s ease-out forwards;
+  animation: slideInFromRight 2s ease-out;
   animation-delay: 0.2s;
 }
 
